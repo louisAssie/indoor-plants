@@ -1,0 +1,165 @@
+:root {
+--bs-green:#636F44;
+--border-color:rgba(99, 111, 68, 45%);
+}
+* {
+    box-sizing: border-box;
+    outline: 0 !important;
+}
+
+.fs-1 {
+    font-size: calc(5.375rem + 1.5vw)!important;
+}
+.fs-2 {
+    font-size: calc(2.375rem + 1.5vw)!important;
+}
+.btn-primary:hover, .btn-primary:active {
+    background-color: rgba(203, 215, 181, 0.5);
+    border-color: var(--bs-primary);
+    box-shadow: none;
+    border:10px solid var(--border-color);
+
+}
+.btn-primary:focus, .btn-primary:active:focus {
+     background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    box-shadow: none;
+    border:10px solid var(--border-color);
+
+}
+.home-button {
+    border:10px solid var(--border-color);
+    border-radius: 45px;
+    padding: 25px 65px;
+    font-weight: 500;
+    transition: background-color 0.5s;
+    position: relative;
+}
+.home-button:first-child::before {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    content:'';
+    background-image: url('../images/marble-queen-photos.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: -60px;
+    left: -60px;
+    transform: scale(0) rotate(-10deg);
+    transition: all 0.5s ease;
+}
+.home-button:first-child::after {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    content:'';
+    background-image: url('../images/aglaonema.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: -40px;
+    right: -40px;
+    z-index: 2;
+    transform: scale(0) rotate(10deg);
+    transition: all 0.5s ease;
+
+
+}
+.home-button:hover {
+    border:10px solid var(--border-color);
+}
+.home-button:first-child:hover::before {
+    transform: scale(1) rotate(0deg);
+}
+.home-button:first-child:hover::after {
+    transform: scale(1) rotate(0deg);
+}
+.home-button:last-child::before {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    content:'';
+    background-image: url('../images/monstera.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: -60px;
+    left: -60px;
+    transform: scale(0) rotate(-10deg);
+    transition: all 0.5s ease;
+}
+.home-button:last-child::after {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    content:'';
+    background-image: url('../images/fiddle-leaf-fig.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: -40px;
+    right: -100px;
+    z-index: 2;
+    transform: scale(0) rotate(10deg);
+    transition: all 0.5s ease;
+
+
+}
+.home-button:hover {
+    border:10px solid var(--border-color);
+}
+.home-button:last-child:hover::before {
+    transform: scale(1) rotate(0deg);
+}
+.home-button:last-child:hover::after {
+    transform: scale(1) rotate(0deg);
+}
+html, body {
+    min-height: 100%;
+    margin:0;
+    padding: 0;
+    font-family: ubuntu, sans-serif;
+    height: 100%;
+}
+h1 {
+    font-family: tuppence, serif;
+    font-weight: bold;
+}
+.plant-item {
+    padding: 20px 0;
+}
+.plant-item-img {
+    position: relative;
+}
+.plant-item-img img {
+    position: absolute;
+    width: 100%;
+    max-width: 50vw;
+    max-height: 90vh;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: -1;
+}
+@media only screen and (max-width: 992px) {
+    .plant-item-img {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+    }
+    .plant-item-img img {
+    position: relative;
+    width: 80%;
+    max-width: none;
+}
+}
+
+.plant-item h2 {
+    font-family: tuppence, serif;
+}
+.plant-item h2 span {
+    font-size: 1.5em;
+
+}
+.plant-item:nth-child(even) {
+    align-self: flex-end;
+    justify-content: flex-end;
+    text-align: right;
+}
